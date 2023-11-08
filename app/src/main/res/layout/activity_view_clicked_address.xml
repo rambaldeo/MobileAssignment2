@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewClickedAddress"
+    android:background="@drawable/rounded_corner">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="0sp"
+        android:background="#B0BEBF"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|top"
+            android:text="Update Address"
+            android:autoSizeTextType="uniform"
+            android:textAlignment="center"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:background="@drawable/custom_border">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="240dp"
+                android:layout_width="match_parent"
+                android:padding="15dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/addressFromDB"
+                    android:text="Address"
+                    android:textAlignment="center"
+                    android:background="@color/white"
+                    android:layout_gravity="center"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:padding="15dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/longitudeFromDB"
+                android:text="Longitude"
+                android:background="@color/white"
+
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:padding="15dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/latitudeFromDB"
+                android:text="Latitude"
+                android:background="@color/white"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="550dp"
+        android:columnCount="1">
+
+        <Button
+            android:id="@+id/updateTheDB"
+            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:text="Update Address"
+            android:onClick="this"
+            tools:ignore="onClick"/>
+
+        <Button
+            android:id="@+id/deleteFromDB"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Delete Address"
+            android:onClick="this"
+            tools:ignore="onClick"/>
+
+        <Button
+            android:id="@+id/toList"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:onClick="this"
+            tools:ignore="onClick"/>
+
+    </GridLayout>
+
+</FrameLayout>
